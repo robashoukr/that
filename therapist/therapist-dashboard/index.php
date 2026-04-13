@@ -154,6 +154,9 @@ function firstLetter($name) {
 
   <main class="main">
     <header class="main-header">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="فتح القائمة">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <h1 class="page-title">لوحة التحكم</h1>
       <button class="status-btn">
         <span class="status-dot"></span>
@@ -330,5 +333,6 @@ function firstLetter($name) {
 </div>
 
 <script src="main.js"></script>
+<script src="../sidebar-toggle.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.sidebar-nav li').forEach(li => {
   li.addEventListener('click', () => {
     document.querySelectorAll('.sidebar-nav li').forEach(i => i.classList.remove('active'));

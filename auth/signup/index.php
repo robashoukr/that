@@ -346,10 +346,10 @@
           <h2 class="step-title">هل تعاني من مشاكل جسدية صحية؟</h2>
           <div class="field-group">
             <label class="option-line">
-              <input type="radio" name="physical_issues" value="نعم" /> نعم
+              <input type="radio" name="physical_issues" value="yes" /> نعم
             </label>
             <label class="option-line">
-              <input type="radio" name="physical_issues" value="لا" /> لا
+              <input type="radio" name="physical_issues" value="no" /> لا
             </label>
           </div>
           <div class="field-group">

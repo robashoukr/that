@@ -89,10 +89,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const name = input.name;
       const value = input.value.trim();
 
-      // ملاحظة: خليت كل الحقول النصية إلزامية ما عدا physical_details
+      // حقل تفاصيل المشاكل الجسدية: مطلوب فقط إذا اختار المستخدم "نعم"
       if (name === "physical_details") {
-        // هذا الحقل اختياري، تخطّيه
-        continue;
+        const physicalIssues = form.querySelector(
+          'input[name="physical_issues"]:checked'
+        );
+        if (!physicalIssues || physicalIssues.value !== "yes") {
+          continue;
+        }
       }
 
       if (value === "") {
@@ -135,6 +139,30 @@ document.addEventListener("DOMContentLoaded", function () {
       showStep(currentIndex);
     }
   });
+
+  // تعطيل/تفعيل حقل تفاصيل المشاكل الجسدية حسب اختيار المستخدم
+  const physicalIssuesRadios = form.querySelectorAll(
+    'input[name="physical_issues"]'
+  );
+  const physicalDetailsInput = form.querySelector(
+    'input[name="physical_details"]'
+  );
+
+  function updatePhysicalDetailsState() {
+    if (!physicalDetailsInput) return;
+    const selected = form.querySelector('input[name="physical_issues"]:checked');
+    if (selected && selected.value === "no") {
+      physicalDetailsInput.disabled = true;
+      physicalDetailsInput.value = "";
+    } else {
+      physicalDetailsInput.disabled = false;
+    }
+  }
+
+  physicalIssuesRadios.forEach((radio) => {
+    radio.addEventListener("change", updatePhysicalDetailsState);
+  });
+  updatePhysicalDetailsState();
 
   // إظهار أول خطوة عند تحميل الصفحة
   showStep(currentIndex);

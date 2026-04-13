@@ -1,4 +1,7 @@
-  <aside class="sidebar">
+  <!-- Sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="../../homepage/index.php">
         <img src="img/Frame 392 (1).png" alt="شعار ذات" class="brand-icon">
@@ -64,3 +67,4 @@
 
 
   </aside>
+

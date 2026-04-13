@@ -106,6 +106,7 @@ $status_filter = [
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>الحالات - ذات للاستشارات النفسية</title>
     <link rel="icon" type="./img/Silver.png" href="img/Silver.png">
 
@@ -134,6 +135,9 @@ $status_filter = [
 
             <!-- شريط الحالة أعلى الصفحة -->
             <header class="main-header">
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="فتح القائمة" >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <h1 class="page-title">الحالات</h1>
                 <button class="status-btn">
                     <span class="status-dot"></span>
@@ -238,6 +242,7 @@ $status_filter = [
     </div>
 
     <script src="main.js"></script>
+    <script src="../sidebar-toggle.js"></script>
 </body>
 
 </html>

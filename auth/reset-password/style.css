@@ -108,3 +108,72 @@
   margin-bottom: 16px;
   font-size: 14px;
 }
+
+/* =========================================
+   RESPONSIVE - TABLETS & MOBILES
+   ========================================= */
+
+/* ---------- Small tablets / large phones (<= 768px) ---------- */
+@media (max-width: 768px) {
+  .card__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .card__text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .card__label {
+    font-size: 14px;
+  }
+  #password,
+  #confirm_password {
+    height: 46px;
+    font-size: 14px;
+    padding: 0 14px;
+  }
+  .card__submit {
+    height: 46px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .linko {
+    font-size: 14px;
+  }
+  .error-msg {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* ---------- Phones (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .card__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .card__text {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+  .card__label {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  #password,
+  #confirm_password {
+    height: 44px;
+    font-size: 13px;
+  }
+  .card__form-row + .card__form-row {
+    margin-top: 12px;
+  }
+  .card__submit {
+    height: 44px;
+    font-size: 14px;
+  }
+  .linko {
+    font-size: 13px;
+  }
+}

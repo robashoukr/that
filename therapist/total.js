@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       'input[type="text"], input[type="number"], input[type="email"], input[type="tel"], textarea'
     );
     for (const input of textInputs) {
+      if (input.disabled) continue;
       if (input.value.trim() === "") {
         alert("رجاءً املأ الحقل قبل المتابعة.");
         input.focus();

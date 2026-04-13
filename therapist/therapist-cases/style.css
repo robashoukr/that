@@ -162,9 +162,8 @@ body {
   padding: 12px 14px 10px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  width: 386.6600036621094px;
-  height: 328px;
+  width: 100%;
+  min-height: 328px;
   gap: 30px;
 }
 
@@ -339,58 +338,121 @@ line-height: 27px;
 
 
 
-/* responsive */
+/* =========================================
+   RESPONSIVE - TABLETS & MOBILES
+   ========================================= */
 
+/* ---------- Tablets (<= 1100px) ---------- */
 @media (max-width: 1100px) {
   .cases-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .main {
+    padding: 16px 18px 12px;
+  }
 }
 
-@media (max-width: 800px) {
-  .app {
+/* ---------- Small tablets / large phones (<= 900px) ---------- */
+@media (max-width: 900px) {
+  /* Topbar: stack summary above toolbar */
+  .cases-topbar {
     flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 14px;
   }
-
-  .sidebar {
+  .cases-toolbar {
     width: 100%;
-    border-left: none;
-    border-top: 1px solid #D6DFE9;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 16px;
-    background-color: #D6DFE9;
+    gap: 8px;
   }
-
-  .sidebar-header,
-  .user-card {
-    border-bottom: none;
-  }
-
-  .sidebar-nav {
+  .search-box {
     flex: 1;
   }
-
-  .sidebar-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-
-  .sidebar-footer {
-    margin-top: 0;
-    border-top: none;
+  .search-box input {
+    width: 100%;
   }
 }
 
-@media (max-width: 700px) {
+/* ---------- Phones (<= 600px) ---------- */
+@media (max-width: 600px) {
   .cases-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .case-card {
+    min-height: auto;
+    gap: 18px;
+    padding: 12px 12px;
+  }
+  .case-card-header {
+    flex-wrap: wrap;
+  }
+  .case-avatar {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+  .case-name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .case-diagnosis {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .case-footer {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-
+  .summary-title {
+    font-size: 16px;
+  }
+  .filter-btn {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+  .search-box input {
+    height: 36px;
+    font-size: 13px;
+  }
   .filter-menu {
     right: auto;
     left: 0;
+    width: 170px;
+  }
+
+  .main {
+    padding: 12px 10px 10px;
+  }
+  .main-header {
+    padding: 12px !important;
+    margin-bottom: 10px;
+  }
+  .page-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .status-btn {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+}
+
+/* ---------- Small phones (<= 400px) ---------- */
+@media (max-width: 400px) {
+  .cases-toolbar {
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .filter-menu {
+    width: 100%;
   }
 }

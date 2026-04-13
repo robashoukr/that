@@ -15,4 +15,4 @@ define('MAIL_FROM', 'no-reply@that.com');
 define('MAIL_FROM_NAME', 'ذات للاستشارات النفسية');
 
 // App
-define('APP_URL', 'http://localhost/that-roba');
+define('APP_URL', 'http://localhost/that');
